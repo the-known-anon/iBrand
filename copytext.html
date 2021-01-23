@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Navbar Animation</title>
+    <link rel="stylesheet" href="style.css" />
+	<script>
+        var textarea = null;
+        window.addEventListener("load", function() {
+            textarea = window.document.querySelector("textarea");
+            textarea.addEventListener("keypress", function() {
+                if(textarea.scrollTop != 0){
+                    textarea.style.height = textarea.scrollHeight + "px";
+                }
+            }, false);
+        }, false);
+		
+		function copy() {
+  /* Get the text field */
+  var copyText = document.getElementById("my");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="menu">
+          <h3 class="logo">i<span>brand</span></h3>
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-container">
+        <div class="main">
+          <header>
+            <div class="overlay">
+              <div class="inner">
+                <h6 class="title" style = "font-size:30px">Start building your personal brand in 3 simple steps</h6>
+				<br>
+                <p style = "font-size:30px">
+                  Step 1: Collect Feedback
+                </p>
+				<br>
+				<br>
+				<p>
+                  How do you want others to describe you?
+                </p>
+				<br>
+				<p>Copy the link and send it to your colleagues/friends/teacher/supervisor</p>
+				<form>
+				<textarea id="my" name="our_textbox" style="border-radius: 25px; align: right; width: 600px;  height: 30px; outline: none; font-size:20px; padding:20px; resize: none;
+            overflow: hidden; ">iBrand.com/EW3HHG34243</textarea>
+				</form>
+				
+
+                <a href = "be.html"><button class="btn" onclick="copy()">Copy Link</button></a>
+              </div>
+            </div>
+          </header>
+        </div>
+
+        <div class="shadow one"></div>
+        <div class="shadow two"></div>
+      </div>
+
+      <div class="links">
+        <ul>
+          <li>
+            <a href="home.html" style="--i: 0.05s;">Home</a>
+          </li>
+          <li>
+            <a href="result.html" style="--i: 0.1s;">Notifications</a>
+          </li>
+		  <li>
+            <a href="result.html" style="--i: 0.1s;">Results</a>
+          </li>          
+          
+          
+        </ul>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
